@@ -48,6 +48,9 @@ class FirstViewController: UIViewController {
         nameField.text = ""
         ageField.text = ""
         outputLabel.text = ""
+        outputLabel2.text = ""
+        outputLabel3.text = ""
+        outputLabel4.text = ""
     }
 
     @IBAction func resetTextButton(sender: AnyObject) {

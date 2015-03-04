@@ -14,11 +14,11 @@
 		<string>https://github.com/megknoll/ga-mob-nyc-2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assessments/02/Lesson02.xcodeproj</string>
+	<string>02/Lesson02.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9E6CCD2300BE0F19C1493179A1360F455D7725FA</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/megknoll/ga-mob-nyc-2.git</string>
