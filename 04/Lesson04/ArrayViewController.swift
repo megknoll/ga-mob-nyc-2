@@ -8,16 +8,69 @@
 
 import UIKit
 
-class ArrayViewController: UIViewController {
+class ArrayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+    
+    @IBOutlet weak var textInput: UITextField!
+    @IBOutlet weak var tableArrayView: UITableView!
+    
+    @IBOutlet weak var topConstraintTextField: NSLayoutConstraint!
+    
+    var myTodoArray:[String] = []
+    
+    // Add item to end of array, reset textfield & reload table
+    func addArrayItem() {
+        let newArrayItem = textInput.text
+        
+        if newArrayItem != nil || newArrayItem != "" {
+
+            myTodoArray.append(newArrayItem)
+            
+            // Animate and reload table
+            UIView.animateWithDuration(0.3, animations: {
+                self.topConstraintTextField.constant += 300
+                self.textInput.alpha = 0
+                self.view.layoutIfNeeded()
+                }, completion : {(finished) in
+                    UIView.animateWithDuration(0.3, animations : {
+                        self.topConstraintTextField.constant = 30
+                        self.textInput.alpha = 1
+                        self.textInput.text = ""
+                        self.tableArrayView.reloadData()
+                        self.view.layoutIfNeeded()
+                    })
+            })
+        }
+    }
+    
+    // On return key, update the table view
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        addArrayItem()
+        textInput.resignFirstResponder()
+        return true
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return myTodoArray.count
+    }
+    
+    // Assign table cell text to array items
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("arrayCell", forIndexPath: indexPath) as UITableViewCell
+
+        cell.textLabel!.text = myTodoArray[indexPath.row]
+        
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        TODO one: Add a table view AND a text input box to this view controller, either in code or via the storyboard. Accept keyboard input from the text view when the return key is pressed. Add the string that was entered into the text view into an array of strings (stored in this class).
-        TODO two: Make this class a UITableViewDelegate and UITableViewDataSource that supply the above table view with cells. These cells should correspond to the text entered into the text box. E.g. If the text "one", then "two", then "three" was entered into the text box, there should be three cells in this table view that contain those strings in order.
-        
-        */
     }
 }
 
