@@ -14,7 +14,8 @@ class ThirdViewController: ExerciseViewController {
     var topRBox : UIView!
     var bottomLBox : UIView!
     var bottomRBox : UIView!
-
+    var topRBoxTop : NSLayoutConstraint!
+    var topLBoxTop : NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +57,16 @@ class ThirdViewController: ExerciseViewController {
         let barHeight: CGFloat = 44.0
         let screenHeight = exerciseView.frame.height
         let navHeight = self.navigationController?.navigationBar.frame.height
+        let minY = UIDevice.currentDevice().orientation == .Portrait ? navHeight! + 20 : navHeight!
         
         //Constraints for top left box
-        let topLBoxTop = NSLayoutConstraint(item: topLBox,
+        topLBoxTop = NSLayoutConstraint(item: topLBox,
             attribute: NSLayoutAttribute.Top,
             relatedBy: NSLayoutRelation.Equal,
             toItem: exerciseView,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: navHeight! + 20)
+            constant: minY)
         
         let topLBoxLeading = NSLayoutConstraint(item: topLBox,
             attribute: NSLayoutAttribute.Leading,
@@ -91,13 +93,13 @@ class ThirdViewController: ExerciseViewController {
             constant: 20)
         
         //Constraints for top right box
-        let topRBoxTop = NSLayoutConstraint(item: topRBox,
+        topRBoxTop = NSLayoutConstraint(item: topRBox,
             attribute: NSLayoutAttribute.Top,
             relatedBy: NSLayoutRelation.Equal,
             toItem: exerciseView,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: navHeight! + 20)
+            constant: minY)
         
         let topRBoxLeading = NSLayoutConstraint(item: topRBox,
             attribute: NSLayoutAttribute.Trailing,
@@ -194,6 +196,15 @@ class ThirdViewController: ExerciseViewController {
     }
     
     override func shouldAutorotate() -> Bool {
+        
+        // Adjust for nav height margin if in landscape - this is convoluted but I couldn't get the topLayoutGuide to work
+        let navHeight = self.navigationController?.navigationBar.frame.height
+        let minY = UIDevice.currentDevice().orientation == .Portrait ? navHeight! + 20 : navHeight!
+  
+        topRBoxTop.constant = minY
+        topLBoxTop.constant = minY
+        self.view.layoutIfNeeded()
+            
         return true
     }
     

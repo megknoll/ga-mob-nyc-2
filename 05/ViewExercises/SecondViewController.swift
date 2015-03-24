@@ -63,7 +63,7 @@ class SecondViewController: ExerciseViewController {
         let screenWidth = exerciseView.frame.width
         let screenHeight = exerciseView.frame.height
         
-        //Determine max and min y coordinates given the toolbar heights
+        // Determine max and min y coordinates given the toolbar heights
         let maxY = screenHeight-barHeight
         let minY = screenHeight < screenWidth ? navHeight! :navHeight!+20
         
