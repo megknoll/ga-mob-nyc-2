@@ -10,6 +10,7 @@ import UIKit
 
 class SixthViewController: ExerciseViewController, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView()
+    var rows = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,43 @@ class SixthViewController: ExerciseViewController, UITableViewDelegate, UITableV
         
         Add a label to each cell that is green and centered, and have its text say “Row {X}” (X is the row number of the cell). The tableview should rotate correctly. Use Autolayout.
         */
+        
+        // Remove any pre-existing labels
+        for subview in cell!.subviews {
+            if subview is UILabel {
+                subview.removeFromSuperview()
+            }
+        }
+
+        // Create new label with correct row title
+        var myLabel = UILabel()
+        myLabel.backgroundColor = UIColor.greenColor()
+        myLabel.text = "Row \(indexPath.row)"
+        myLabel.textAlignment = .Center
+        
+        myLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        cell?.addSubview(myLabel)
+            
+        // Create constraints for label position
+        let labelCenterX = NSLayoutConstraint(item: myLabel,
+            attribute: NSLayoutAttribute.CenterX,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: cell,
+            attribute: NSLayoutAttribute.CenterX,
+            multiplier: 1.0,
+            constant: 0)
+        
+        let labelCenterY = NSLayoutConstraint(item: myLabel,
+            attribute: NSLayoutAttribute.CenterY,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: cell,
+            attribute: NSLayoutAttribute.CenterY,
+            multiplier: 1.0,
+            constant: 0)
+        
+        // Add constraints to cell
+        cell?.addConstraints([labelCenterX,labelCenterY])
         
         return cell!
     }

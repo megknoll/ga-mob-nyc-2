@@ -22,6 +22,33 @@ class FirstViewController: ExerciseViewController {
         
         Your view should be in self.exerciseView, not self.view
         */
+        
+        // Get screen and toolbar heights
+        let navHeight = self.navigationController?.navigationBar.frame.height
+        let barHeight: CGFloat = 44.0
+        
+        let screenWidth = exerciseView.frame.width
+        let screenHeight = exerciseView.frame.height
+        
+        let maxY = screenHeight-barHeight
+        let minY = navHeight!+20
+        
+        // Create top UIView
+        var topBox = UIView(frame: CGRect(x:0,y:minY,width:screenWidth,height:10))
+        topBox.layer.borderColor = UIColor.blackColor().CGColor
+        topBox.layer.borderWidth = 2
+        topBox.backgroundColor = UIColor.redColor()
+        
+        // Create bottom UIView
+        var bottomBox = UIView(frame: CGRect(x:0, y:maxY-10, width:screenWidth,height:10))
+        bottomBox.layer.borderColor = UIColor.redColor().CGColor
+        bottomBox.layer.borderWidth = 2
+        bottomBox.backgroundColor = UIColor.blackColor()
+        
+        // Add views to the main view
+        exerciseView.addSubview(topBox)
+        exerciseView.addSubview(bottomBox)
+        
     }
     
     override func shouldAutorotate() -> Bool {

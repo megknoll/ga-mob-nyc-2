@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B0063FAF-14F9-42C3-94A3-A16060136821</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ViewExercises</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>420f6d86-4340-13bf-8445-ce57b7db7bff++1300</key>
+		<string>https://github.com/ga-students/MOB-NYC-2/trunk/Assessments/05</string>
+		<key>9E6CCD2300BE0F19C1493179A1360F455D7725FA</key>
+		<string>https://github.com/megknoll/ga-mob-nyc-2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ViewExercises.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>420f6d86-4340-13bf-8445-ce57b7db7bff++1300</key>
+		<string>../..</string>
+		<key>9E6CCD2300BE0F19C1493179A1360F455D7725FA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>420f6d86-4340-13bf-8445-ce57b7db7bff++1300</key>
+		<string>https://github.com/ga-students/MOB-NYC-2</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ga-students/MOB-NYC-2/trunk/Assessments/05/ViewExercises.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>420f6d86-4340-13bf-8445-ce57b7db7bff++1300</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9E6CCD2300BE0F19C1493179A1360F455D7725FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>420f6d86-4340-13bf-8445-ce57b7db7bff++1300</string>
+			<key>IDESourceControlWCCName</key>
+			<string>05</string>
+		</dict>
+	</array>
+</dict>
+</plist>
