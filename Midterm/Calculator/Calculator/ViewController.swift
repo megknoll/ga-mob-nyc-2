@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         if result != nil {
             let nf = NSNumberFormatter()
             nf.numberStyle = .DecimalStyle
+            nf.maximumFractionDigits = 5
             let stringResult = nf.stringFromNumber(result!)
             outputLabel.font = countElements(stringResult!) > 6 ? minFont : normalFont
             outputLabel.text = stringResult
