@@ -19,12 +19,17 @@ class ViewController: UIViewController {
     var mainPanelWConstraint : NSLayoutConstraint!
     var secondPanelWConstraint : NSLayoutConstraint!
     
+    // Adjusted font widths based on length of number entered
+    var normalFont = UIFont(name: "HelveticaNeue-Thin", size: 100)
+    var minFont = UIFont(name: "HelveticaNeue-Thin", size: 50)
+    
     // Calculator operation variables
     let calculator = Calc()
     
     // Clear calculator stack
     func clear(sender: AnyObject){
         calculator.clear()
+        outputLabel.font = normalFont
         outputLabel.text = "0"
     }
     
@@ -39,6 +44,7 @@ class ViewController: UIViewController {
             let nf = NSNumberFormatter()
             nf.numberStyle = .DecimalStyle
             let stringResult = nf.stringFromNumber(result!)
+            outputLabel.font = countElements(stringResult!) > 6 ? minFont : normalFont
             outputLabel.text = stringResult
         } else {
             outputLabel.text = "ERROR"
@@ -58,6 +64,8 @@ class ViewController: UIViewController {
         var currentButton = sender as UIButton
         var title = sender.titleForState(UIControlState.Normal)
         var result = calculator.appendNumber(title!)
+        
+        outputLabel.font = countElements(result) > 6 ? minFont : normalFont
         
         println("number: \(title!), calc response: \(result)")
         
@@ -203,7 +211,8 @@ class ViewController: UIViewController {
             mainPanelWConstraint.constant = 0.0
             secondPanelWConstraint.constant = 0.0
             
-            outputLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 100)
+            normalFont = UIFont(name: "HelveticaNeue-Thin", size: 100)
+            outputLabel.font = countElements(outputLabel.text!) > 6 ? minFont : normalFont
             
             for view in mainPanel.subviews {
                 if view is UIButton {
@@ -218,7 +227,9 @@ class ViewController: UIViewController {
             mainPanelWConstraint.constant = -panelWidth
             secondPanelWConstraint.constant = panelWidth
             
-            outputLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 50)
+            normalFont = UIFont(name: "HelveticaNeue-Thin", size: 50)
+            outputLabel.font = normalFont
+            
             for view in mainPanel.subviews {
                 if view is UIButton {
                     var tempButton = view as UIButton
