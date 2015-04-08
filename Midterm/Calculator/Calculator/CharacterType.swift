@@ -14,4 +14,5 @@ enum CharacterType {
     case Num
     case Operation
     case Empty
+    case Infinity
 }

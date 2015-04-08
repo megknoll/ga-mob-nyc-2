@@ -222,7 +222,9 @@ class Calc {
         
         if calcStack.isEmpty {
             return CharacterType.Empty
-        } else if calcStack[last] != "0.0" &&  (calcStack[last] as NSString).doubleValue == 0.0 {
+        } else if calcStack[last] == "inf"{
+            CharacterType.Infinity
+        }else if calcStack[last] != "0.0" &&  (calcStack[last] as NSString).doubleValue == 0.0 {
             return CharacterType.Operation
         }
         return CharacterType.Num
