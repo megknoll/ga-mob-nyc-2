@@ -243,7 +243,7 @@ class Calc {
         let expn = NSExpression(format: expression)
         println("formatted: \(expn) = \(expn.expressionValueWithObject(nil, context: nil))")
         
-        return expn.expressionValueWithObject(nil, context: nil) as Double
+        return expn.expressionValueWithObject(nil, context: nil) as! Double
         
     }
     

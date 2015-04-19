@@ -45,36 +45,36 @@ class ViewController: UIViewController {
             nf.numberStyle = .DecimalStyle
             nf.maximumFractionDigits = 5
             let stringResult = nf.stringFromNumber(result!)
-            outputLabel.font = countElements(stringResult!) > 6 ? minFont : normalFont
+            outputLabel.font = count(stringResult!) > 6 ? minFont : normalFont
             outputLabel.text = stringResult
         } else {
             outputLabel.text = "ERROR"
         }
         
         UIView.animateWithDuration(0.1, animations: {
-            (sender as UIButton).alpha = 0.8
+            (sender as! UIButton).alpha = 0.8
             }, completion : {(finished) in
                 UIView.animateWithDuration(0.1, animations : {
-                    (sender as UIButton).alpha = 1.0
+                    (sender as! UIButton).alpha = 1.0
                 })
         })
     }
     
     // Handles number entry
     func number(sender: AnyObject){
-        var currentButton = sender as UIButton
+        var currentButton = sender as! UIButton
         var title = sender.titleForState(UIControlState.Normal)
         var result = calculator.appendNumber(title!)
         
-        outputLabel.font = countElements(result) > 6 ? minFont : normalFont
+        outputLabel.font = count(result) > 6 ? minFont : normalFont
         
         println("number: \(title!), calc response: \(result)")
         
         UIView.animateWithDuration(0.1, animations: {
-            (sender as UIButton).alpha = 0.8
+            (sender as! UIButton).alpha = 0.8
             }, completion : {(finished) in
                 UIView.animateWithDuration(0.1, animations : {
-                    (sender as UIButton).alpha = 1.0
+                    (sender as! UIButton).alpha = 1.0
                 })
         })
         
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     
     // Handles toggle between Radians and Degrees
     func radToggle(sender: AnyObject){
-        var currentButton = sender as UIButton
+        var currentButton = sender as! UIButton
         var title = sender.titleForState(UIControlState.Normal)
         
         if title == "Rad"{
@@ -99,14 +99,14 @@ class ViewController: UIViewController {
     
     // Placeholder function for unassigned buttons
     func placeholder(sender: AnyObject){
-        var currentButton = sender as UIButton
+        var currentButton = sender as! UIButton
         var title = sender.titleForState(UIControlState.Normal)
         
         UIView.animateWithDuration(0.1, animations: {
-            (sender as UIButton).alpha = 0.8
+            (sender as! UIButton).alpha = 0.8
             }, completion : {(finished) in
                 UIView.animateWithDuration(0.1, animations : {
-                    (sender as UIButton).alpha = 1.0
+                    (sender as! UIButton).alpha = 1.0
                 })
         })
     }
@@ -213,11 +213,11 @@ class ViewController: UIViewController {
             secondPanelWConstraint.constant = 0.0
             
             normalFont = UIFont(name: "HelveticaNeue-Thin", size: 100)
-            outputLabel.font = countElements(outputLabel.text!) > 6 ? minFont : normalFont
+            outputLabel.font = count(outputLabel.text!) > 6 ? minFont : normalFont
             
             for view in mainPanel.subviews {
                 if view is UIButton {
-                    var tempButton = view as UIButton
+                    var tempButton = view as! UIButton
                     tempButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 30)
                 }
             }
@@ -233,7 +233,7 @@ class ViewController: UIViewController {
             
             for view in mainPanel.subviews {
                 if view is UIButton {
-                    var tempButton = view as UIButton
+                    var tempButton = view as! UIButton
                     tempButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
                 }
             }
