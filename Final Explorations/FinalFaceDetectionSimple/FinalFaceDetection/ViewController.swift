@@ -100,7 +100,7 @@ class ViewController: UIViewController {
                 
                 // UIKit Coordinates
                 var newPosM = CGPointApplyAffineTransform(feature.mouthPosition, transformNew)
-                mouthTestView.frame.origin.x = newPosM.x
+                mouthTestView.frame.origin.x = newPosM.x - 2.5
                 mouthTestView.frame.origin.y = newPosM.y
                 
                 view.addSubview(mouthTestView)
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
                 
                 // UIKit Coordinates
                 var newPos = CGPointApplyAffineTransform(feature.leftEyePosition, transformNew)
-                leftEyeTestView.frame.origin.x = newPos.x
+                leftEyeTestView.frame.origin.x = newPos.x - 2.5
                 leftEyeTestView.frame.origin.y = newPos.y
                 
                 view.addSubview(leftEyeTestView)
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
                 
                 // UIKit Coordinates
                 var newPosX = CGPointApplyAffineTransform(feature.rightEyePosition, transformNew)
-                rightEyeTestView.frame.origin.x = newPosX.x
+                rightEyeTestView.frame.origin.x = newPosX.x - 2.5
                 rightEyeTestView.frame.origin.y = newPosX.y
                 
                 view.addSubview(rightEyeTestView)
