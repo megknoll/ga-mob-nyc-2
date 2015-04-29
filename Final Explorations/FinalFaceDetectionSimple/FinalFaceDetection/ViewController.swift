@@ -28,15 +28,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var viewWidth = CGFloat(view.frame.width)
-        var imgWidth = imageView.image?.size.width
-        var viewHeight = CGFloat(view.frame.height)
-        var imgViewHeight = CGFloat(imageView.frame.height)
-        var imgHeight = imageView.image?.size.height
+        // HEIGHT CONSTANTS
+        let viewWidth = CGFloat(view.frame.width)
+        let imgWidth = imageView.image?.size.width
+        let viewHeight = CGFloat(view.frame.height)
+        let imgViewHeight = CGFloat(imageView.frame.height)
+        let imgHeight = imageView.image?.size.height
         
         var scaleY = viewHeight / imgHeight! //(view.frame.height-110) / imgHeight!
         var scaleX = viewWidth / imgWidth!
         
+        //COORDINATE TRANSFORM
         transformNew = CGAffineTransformMakeScale(scaleX, -scaleY)
         transformNew = CGAffineTransformTranslate(transformNew, 0, (-1 * imgHeight!))
         
@@ -52,8 +54,7 @@ class ViewController: UIViewController {
         faceTestView.backgroundColor = UIColor(red:0.941, green:0.878, blue:0.000, alpha: 1) // yellow
         
 
-        
-        // CREATE DETECTORY & IMAGE
+        // CREATE IMAGE DETECTOR, GET FEATURES
         var ciImage  = CIImage(CGImage:imageView.image!.CGImage)
         var ciDetector = CIDetector(ofType:CIDetectorTypeFace
             ,context:nil
@@ -67,6 +68,8 @@ class ViewController: UIViewController {
         UIGraphicsBeginImageContext(imageView.image!.size)
         imageView.image!.drawInRect(CGRectMake(0,0,imageView.image!.size.width,imageView.image!.size.height))
         
+        
+        // LOOP THROUGH ALL FACES IN FEATURE ARRAY
         for feature in features{
             
             //context
