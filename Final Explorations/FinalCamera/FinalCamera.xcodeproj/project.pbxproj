@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72158C61AE7D4FC0012A63B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72158C51AE7D4FC0012A63B /* Camera.swift */; };
 		C7A55FC91AD97FEE00A6AEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A55FC81AD97FEE00A6AEC8 /* AppDelegate.swift */; };
 		C7A55FCC1AD97FEE00A6AEC8 /* FinalCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7A55FCA1AD97FEE00A6AEC8 /* FinalCamera.xcdatamodeld */; };
 		C7A55FCE1AD97FEE00A6AEC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A55FCD1AD97FEE00A6AEC8 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C72158C51AE7D4FC0012A63B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		C7A55FC31AD97FEE00A6AEC8 /* FinalCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A55FC71AD97FEE00A6AEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A55FC81AD97FEE00A6AEC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				C7A55FC81AD97FEE00A6AEC8 /* AppDelegate.swift */,
 				C7A55FCD1AD97FEE00A6AEC8 /* ViewController.swift */,
+				C72158C51AE7D4FC0012A63B /* Camera.swift */,
 				C7A55FCF1AD97FEE00A6AEC8 /* Main.storyboard */,
 				C7A55FD21AD97FEF00A6AEC8 /* Images.xcassets */,
 				C7A55FD41AD97FEF00A6AEC8 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72158C61AE7D4FC0012A63B /* Camera.swift in Sources */,
 				C7A55FCE1AD97FEE00A6AEC8 /* ViewController.swift in Sources */,
 				C7A55FC91AD97FEE00A6AEC8 /* AppDelegate.swift in Sources */,
 				C7A55FCC1AD97FEE00A6AEC8 /* FinalCamera.xcdatamodeld in Sources */,
