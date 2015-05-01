@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C76972061AF3254C00779DC5 /* big_button_monster_presed.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972041AF3254C00779DC5 /* big_button_monster_presed.png */; };
+		C76972071AF3254C00779DC5 /* big_button_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972051AF3254C00779DC5 /* big_button_monster.png */; };
+		C769720A1AF32C0900779DC5 /* camera_icon_small_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */; };
+		C769720D1AF32F4100779DC5 /* photo_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = C769720C1AF32F4100779DC5 /* photo_icon_small.png */; };
+		C769720F1AF3325600779DC5 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769720E1AF3325600779DC5 /* StarView.swift */; };
+		C76972111AF3355900779DC5 /* AgeGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76972101AF3355900779DC5 /* AgeGateView.swift */; };
+		C7D9A0F21AF2E79F0014D65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D9A0F11AF2E79F0014D65C /* AppDelegate.swift */; };
+		C7D9A0F41AF2E79F0014D65C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D9A0F31AF2E79F0014D65C /* ViewController.swift */; };
+		C7D9A0F71AF2E79F0014D65C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D9A0F51AF2E79F0014D65C /* Main.storyboard */; };
+		C7D9A0F91AF2E79F0014D65C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D9A0F81AF2E79F0014D65C /* Images.xcassets */; };
+		C7D9A0FC1AF2E79F0014D65C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D9A0FA1AF2E79F0014D65C /* LaunchScreen.xib */; };
+		C7D9A1081AF2E79F0014D65C /* SelfieMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D9A1071AF2E79F0014D65C /* SelfieMonsterTests.swift */; };
+		C7D9A1221AF302DC0014D65C /* background_fibers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7D9A1211AF302DC0014D65C /* background_fibers.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7D9A1021AF2E79F0014D65C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7D9A0E41AF2E79F0014D65C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7D9A0EB1AF2E79F0014D65C;
+			remoteInfo = SelfieMonster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C76972041AF3254C00779DC5 /* big_button_monster_presed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_button_monster_presed.png; sourceTree = "<group>"; };
+		C76972051AF3254C00779DC5 /* big_button_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_button_monster.png; sourceTree = "<group>"; };
+		C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon_small_pressed.png; sourceTree = "<group>"; };
+		C769720C1AF32F4100779DC5 /* photo_icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon_small.png; sourceTree = "<group>"; };
+		C769720E1AF3325600779DC5 /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		C76972101AF3355900779DC5 /* AgeGateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeGateView.swift; sourceTree = "<group>"; };
+		C7D9A0EC1AF2E79F0014D65C /* SelfieMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfieMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D9A0F01AF2E79F0014D65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D9A0F11AF2E79F0014D65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7D9A0F31AF2E79F0014D65C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7D9A0F61AF2E79F0014D65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7D9A0F81AF2E79F0014D65C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C7D9A0FB1AF2E79F0014D65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C7D9A1011AF2E79F0014D65C /* SelfieMonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfieMonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D9A1061AF2E79F0014D65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D9A1071AF2E79F0014D65C /* SelfieMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieMonsterTests.swift; sourceTree = "<group>"; };
+		C7D9A1211AF302DC0014D65C /* background_fibers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_fibers.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7D9A0E91AF2E79F0014D65C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D9A0FE1AF2E79F0014D65C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C76972121AF3366D00779DC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7D9A0F31AF2E79F0014D65C /* ViewController.swift */,
+				C769720E1AF3325600779DC5 /* StarView.swift */,
+				C76972101AF3355900779DC5 /* AgeGateView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C7D9A0E31AF2E79F0014D65C = {
+			isa = PBXGroup;
+			children = (
+				C7D9A0EE1AF2E79F0014D65C /* SelfieMonster */,
+				C7D9A1041AF2E79F0014D65C /* SelfieMonsterTests */,
+				C7D9A0ED1AF2E79F0014D65C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7D9A0ED1AF2E79F0014D65C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7D9A0EC1AF2E79F0014D65C /* SelfieMonster.app */,
+				C7D9A1011AF2E79F0014D65C /* SelfieMonsterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7D9A0EE1AF2E79F0014D65C /* SelfieMonster */ = {
+			isa = PBXGroup;
+			children = (
+				C76972121AF3366D00779DC5 /* Views */,
+				C7D9A1111AF2E7F20014D65C /* Images */,
+				C7D9A0F11AF2E79F0014D65C /* AppDelegate.swift */,
+				C7D9A0F51AF2E79F0014D65C /* Main.storyboard */,
+				C7D9A0F81AF2E79F0014D65C /* Images.xcassets */,
+				C7D9A0FA1AF2E79F0014D65C /* LaunchScreen.xib */,
+				C7D9A0EF1AF2E79F0014D65C /* Supporting Files */,
+			);
+			path = SelfieMonster;
+			sourceTree = "<group>";
+		};
+		C7D9A0EF1AF2E79F0014D65C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7D9A0F01AF2E79F0014D65C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7D9A1041AF2E79F0014D65C /* SelfieMonsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7D9A1071AF2E79F0014D65C /* SelfieMonsterTests.swift */,
+				C7D9A1051AF2E79F0014D65C /* Supporting Files */,
+			);
+			path = SelfieMonsterTests;
+			sourceTree = "<group>";
+		};
+		C7D9A1051AF2E79F0014D65C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7D9A1061AF2E79F0014D65C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7D9A1111AF2E7F20014D65C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */,
+				C76972041AF3254C00779DC5 /* big_button_monster_presed.png */,
+				C76972051AF3254C00779DC5 /* big_button_monster.png */,
+				C769720C1AF32F4100779DC5 /* photo_icon_small.png */,
+				C7D9A1211AF302DC0014D65C /* background_fibers.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7D9A0EB1AF2E79F0014D65C /* SelfieMonster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7D9A10B1AF2E79F0014D65C /* Build configuration list for PBXNativeTarget "SelfieMonster" */;
+			buildPhases = (
+				C7D9A0E81AF2E79F0014D65C /* Sources */,
+				C7D9A0E91AF2E79F0014D65C /* Frameworks */,
+				C7D9A0EA1AF2E79F0014D65C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelfieMonster;
+			productName = SelfieMonster;
+			productReference = C7D9A0EC1AF2E79F0014D65C /* SelfieMonster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7D9A1001AF2E79F0014D65C /* SelfieMonsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7D9A10E1AF2E79F0014D65C /* Build configuration list for PBXNativeTarget "SelfieMonsterTests" */;
+			buildPhases = (
+				C7D9A0FD1AF2E79F0014D65C /* Sources */,
+				C7D9A0FE1AF2E79F0014D65C /* Frameworks */,
+				C7D9A0FF1AF2E79F0014D65C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7D9A1031AF2E79F0014D65C /* PBXTargetDependency */,
+			);
+			name = SelfieMonsterTests;
+			productName = SelfieMonsterTests;
+			productReference = C7D9A1011AF2E79F0014D65C /* SelfieMonsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7D9A0E41AF2E79F0014D65C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Meghan Knoll";
+				TargetAttributes = {
+					C7D9A0EB1AF2E79F0014D65C = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					C7D9A1001AF2E79F0014D65C = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = C7D9A0EB1AF2E79F0014D65C;
+					};
+				};
+			};
+			buildConfigurationList = C7D9A0E71AF2E79F0014D65C /* Build configuration list for PBXProject "SelfieMonster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7D9A0E31AF2E79F0014D65C;
+			productRefGroup = C7D9A0ED1AF2E79F0014D65C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7D9A0EB1AF2E79F0014D65C /* SelfieMonster */,
+				C7D9A1001AF2E79F0014D65C /* SelfieMonsterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7D9A0EA1AF2E79F0014D65C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7D9A0F71AF2E79F0014D65C /* Main.storyboard in Resources */,
+				C7D9A0FC1AF2E79F0014D65C /* LaunchScreen.xib in Resources */,
+				C769720D1AF32F4100779DC5 /* photo_icon_small.png in Resources */,
+				C7D9A0F91AF2E79F0014D65C /* Images.xcassets in Resources */,
+				C76972061AF3254C00779DC5 /* big_button_monster_presed.png in Resources */,
+				C7D9A1221AF302DC0014D65C /* background_fibers.jpg in Resources */,
+				C76972071AF3254C00779DC5 /* big_button_monster.png in Resources */,
+				C769720A1AF32C0900779DC5 /* camera_icon_small_pressed.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D9A0FF1AF2E79F0014D65C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7D9A0E81AF2E79F0014D65C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C769720F1AF3325600779DC5 /* StarView.swift in Sources */,
+				C76972111AF3355900779DC5 /* AgeGateView.swift in Sources */,
+				C7D9A0F41AF2E79F0014D65C /* ViewController.swift in Sources */,
+				C7D9A0F21AF2E79F0014D65C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D9A0FD1AF2E79F0014D65C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7D9A1081AF2E79F0014D65C /* SelfieMonsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7D9A1031AF2E79F0014D65C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7D9A0EB1AF2E79F0014D65C /* SelfieMonster */;
+			targetProxy = C7D9A1021AF2E79F0014D65C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7D9A0F51AF2E79F0014D65C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7D9A0F61AF2E79F0014D65C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7D9A0FA1AF2E79F0014D65C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7D9A0FB1AF2E79F0014D65C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7D9A1091AF2E79F0014D65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7D9A10A1AF2E79F0014D65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7D9A10C1AF2E79F0014D65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SelfieMonster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7D9A10D1AF2E79F0014D65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SelfieMonster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C7D9A10F1AF2E79F0014D65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SelfieMonsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelfieMonster.app/SelfieMonster";
+			};
+			name = Debug;
+		};
+		C7D9A1101AF2E79F0014D65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SelfieMonsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelfieMonster.app/SelfieMonster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7D9A0E71AF2E79F0014D65C /* Build configuration list for PBXProject "SelfieMonster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D9A1091AF2E79F0014D65C /* Debug */,
+				C7D9A10A1AF2E79F0014D65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7D9A10B1AF2E79F0014D65C /* Build configuration list for PBXNativeTarget "SelfieMonster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D9A10C1AF2E79F0014D65C /* Debug */,
+				C7D9A10D1AF2E79F0014D65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7D9A10E1AF2E79F0014D65C /* Build configuration list for PBXNativeTarget "SelfieMonsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D9A10F1AF2E79F0014D65C /* Debug */,
+				C7D9A1101AF2E79F0014D65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7D9A0E41AF2E79F0014D65C /* Project object */;
+}
