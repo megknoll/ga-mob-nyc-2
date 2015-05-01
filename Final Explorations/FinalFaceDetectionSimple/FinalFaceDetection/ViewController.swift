@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var mouthTestView: UIView!
     var faceTestView: UIView!
 
+    // For testing - print UI Kit coordinates on tap
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let tap = touches.first as! UITouch
         println("tapped at: x: \(tap.locationInView(self.view).x), y: \(tap.locationInView(self.view).y)")
@@ -31,11 +32,12 @@ class ViewController: UIViewController {
         // HEIGHT CONSTANTS
         let viewWidth = CGFloat(view.frame.width)
         let imgWidth = imageView.image?.size.width
+        let imgHeight2 = CGImageGetHeight(imageView.image!.CGImage)
         let viewHeight = CGFloat(view.frame.height)
         let imgViewHeight = CGFloat(imageView.frame.height)
         let imgHeight = imageView.image?.size.height
         
-        var scaleY = viewHeight / imgHeight! //(view.frame.height-110) / imgHeight!
+        var scaleY = viewHeight / imgHeight!
         var scaleX = viewWidth / imgWidth!
         
         //COORDINATE TRANSFORM
@@ -77,29 +79,32 @@ class ViewController: UIViewController {
             
             //face
             var faceRect = (feature as! CIFaceFeature).bounds
+            
+            //UI Kit Coordinates
+            var faceOrigin = CGPointApplyAffineTransform(faceRect.origin, transformNew)
+            faceTestView.frame.origin.x = faceOrigin.x + (faceRect.width * scaleX)/2.0
+            faceTestView.frame.origin.y = faceOrigin.y - (faceRect.height * scaleY)
+            
+            // CG Coordinates
             faceRect.origin.y = imageView.image!.size.height - faceRect.origin.y - faceRect.size.height
             CGContextSetStrokeColorWithColor(drawCtxt, UIColor.redColor().CGColor)
             CGContextStrokeRect(drawCtxt,faceRect)
             
-            var faceOrigin = CGPointApplyAffineTransform(faceRect.origin, transformNew)
-            faceTestView.frame.origin.x = faceOrigin.x + (faceRect.width * scaleX)/2.0
-            faceTestView.frame.origin.y = faceOrigin.y - (faceRect.height/2.0 * scaleY)
-            
+            // print constants
             println("screen height: \(viewHeight)")
             println("x: \(faceRect.origin.x), y: \(faceRect.origin.y)")
-            println("img height: \(imgHeight!), img view height: \(imgViewHeight), scaleY: \(scaleY)")
+            println("img height: \(imgHeight!), 2: \(imgHeight2), img view height: \(imgViewHeight), scaleY: \(scaleY)")
             println("face height: \(faceRect.height), adjusted height: \(scaleY*faceRect.height)")
             
             view.addSubview(faceTestView)
             
             //mouth
             if((feature.hasMouthPosition) != nil){
-                
                 // CG Coordinates
-                var mouseRectY = imageView.image!.size.height - feature.mouthPosition.y
-                var mouseRect  = CGRectMake(feature.mouthPosition.x - 5,mouseRectY - 5,10,10)
+                var mouthRectY = imageView.image!.size.height - feature.mouthPosition.y
+                var mouthRect  = CGRectMake(feature.mouthPosition.x - 5,mouthRectY - 5,10,10)
                 CGContextSetStrokeColorWithColor(drawCtxt,UIColor.whiteColor().CGColor)
-                CGContextStrokeRect(drawCtxt,mouseRect)
+                CGContextStrokeRect(drawCtxt,mouthRect)
                 
                 // UIKit Coordinates
                 var newPosM = CGPointApplyAffineTransform(feature.mouthPosition, transformNew)
@@ -112,7 +117,6 @@ class ViewController: UIViewController {
             
             //leftEye
             if((feature.hasLeftEyePosition) != nil){
-                
                 // CG Coordinates
                 var leftEyeRectY = imageView.image!.size.height - feature.leftEyePosition.y
                 var leftEyeRect  = CGRectMake(feature.leftEyePosition.x - 5,leftEyeRectY - 5,10,10)
@@ -144,6 +148,8 @@ class ViewController: UIViewController {
 
             }
         }
+        
+        // add final image to view
         var newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         imageView.image = newImage
