@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C76972061AF3254C00779DC5 /* big_button_monster_presed.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972041AF3254C00779DC5 /* big_button_monster_presed.png */; };
-		C76972071AF3254C00779DC5 /* big_button_monster.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972051AF3254C00779DC5 /* big_button_monster.png */; };
+		C742E90E1AF4FEC000DBE9A6 /* Starscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742E90D1AF4FEC000DBE9A6 /* Starscape.swift */; };
+		C742E9101AF50E5600DBE9A6 /* background_linen.png in Resources */ = {isa = PBXBuildFile; fileRef = C742E90F1AF50E5600DBE9A6 /* background_linen.png */; };
+		C742E9131AF51B9000DBE9A6 /* exit_button_2x_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C742E9111AF51B9000DBE9A6 /* exit_button_2x_pressed.png */; };
+		C742E9141AF51B9000DBE9A6 /* exit_button_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C742E9121AF51B9000DBE9A6 /* exit_button_2x.png */; };
+		C742E9191AF52EE000DBE9A6 /* monster_button_2x_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C742E9171AF52EE000DBE9A6 /* monster_button_2x_pressed.png */; };
+		C742E91A1AF52EE000DBE9A6 /* monster_button_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C742E9181AF52EE000DBE9A6 /* monster_button_2x.png */; };
 		C769720A1AF32C0900779DC5 /* camera_icon_small_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */; };
 		C769720D1AF32F4100779DC5 /* photo_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = C769720C1AF32F4100779DC5 /* photo_icon_small.png */; };
 		C769720F1AF3325600779DC5 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769720E1AF3325600779DC5 /* StarView.swift */; };
@@ -33,8 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C76972041AF3254C00779DC5 /* big_button_monster_presed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_button_monster_presed.png; sourceTree = "<group>"; };
-		C76972051AF3254C00779DC5 /* big_button_monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_button_monster.png; sourceTree = "<group>"; };
+		C742E90D1AF4FEC000DBE9A6 /* Starscape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starscape.swift; sourceTree = "<group>"; };
+		C742E90F1AF50E5600DBE9A6 /* background_linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_linen.png; sourceTree = "<group>"; };
+		C742E9111AF51B9000DBE9A6 /* exit_button_2x_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_button_2x_pressed.png; sourceTree = "<group>"; };
+		C742E9121AF51B9000DBE9A6 /* exit_button_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_button_2x.png; sourceTree = "<group>"; };
+		C742E9171AF52EE000DBE9A6 /* monster_button_2x_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster_button_2x_pressed.png; sourceTree = "<group>"; };
+		C742E9181AF52EE000DBE9A6 /* monster_button_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster_button_2x.png; sourceTree = "<group>"; };
 		C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon_small_pressed.png; sourceTree = "<group>"; };
 		C769720C1AF32F4100779DC5 /* photo_icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_icon_small.png; sourceTree = "<group>"; };
 		C769720E1AF3325600779DC5 /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			children = (
 				C7D9A0F31AF2E79F0014D65C /* ViewController.swift */,
 				C769720E1AF3325600779DC5 /* StarView.swift */,
+				C742E90D1AF4FEC000DBE9A6 /* Starscape.swift */,
 				C76972101AF3355900779DC5 /* AgeGateView.swift */,
 			);
 			name = Views;
@@ -141,9 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				C76972081AF32C0900779DC5 /* camera_icon_small_pressed.png */,
-				C76972041AF3254C00779DC5 /* big_button_monster_presed.png */,
-				C76972051AF3254C00779DC5 /* big_button_monster.png */,
+				C742E9111AF51B9000DBE9A6 /* exit_button_2x_pressed.png */,
+				C742E9121AF51B9000DBE9A6 /* exit_button_2x.png */,
+				C742E9171AF52EE000DBE9A6 /* monster_button_2x_pressed.png */,
+				C742E9181AF52EE000DBE9A6 /* monster_button_2x.png */,
 				C769720C1AF32F4100779DC5 /* photo_icon_small.png */,
+				C742E90F1AF50E5600DBE9A6 /* background_linen.png */,
 				C7D9A1211AF302DC0014D65C /* background_fibers.jpg */,
 			);
 			name = Images;
@@ -229,14 +241,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C742E9131AF51B9000DBE9A6 /* exit_button_2x_pressed.png in Resources */,
 				C7D9A0F71AF2E79F0014D65C /* Main.storyboard in Resources */,
 				C7D9A0FC1AF2E79F0014D65C /* LaunchScreen.xib in Resources */,
 				C769720D1AF32F4100779DC5 /* photo_icon_small.png in Resources */,
 				C7D9A0F91AF2E79F0014D65C /* Images.xcassets in Resources */,
-				C76972061AF3254C00779DC5 /* big_button_monster_presed.png in Resources */,
+				C742E91A1AF52EE000DBE9A6 /* monster_button_2x.png in Resources */,
+				C742E9191AF52EE000DBE9A6 /* monster_button_2x_pressed.png in Resources */,
 				C7D9A1221AF302DC0014D65C /* background_fibers.jpg in Resources */,
-				C76972071AF3254C00779DC5 /* big_button_monster.png in Resources */,
+				C742E9101AF50E5600DBE9A6 /* background_linen.png in Resources */,
 				C769720A1AF32C0900779DC5 /* camera_icon_small_pressed.png in Resources */,
+				C742E9141AF51B9000DBE9A6 /* exit_button_2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,7 @@
 			files = (
 				C769720F1AF3325600779DC5 /* StarView.swift in Sources */,
 				C76972111AF3355900779DC5 /* AgeGateView.swift in Sources */,
+				C742E90E1AF4FEC000DBE9A6 /* Starscape.swift in Sources */,
 				C7D9A0F41AF2E79F0014D65C /* ViewController.swift in Sources */,
 				C7D9A0F21AF2E79F0014D65C /* AppDelegate.swift in Sources */,
 			);

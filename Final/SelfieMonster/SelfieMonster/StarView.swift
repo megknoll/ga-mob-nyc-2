@@ -9,12 +9,24 @@
 import UIKit
 
 class StarView: UIView {
-
-    var shapeLayer : CAShapeLayer!
+    private var sides : Int = 0
+    private var radius : CGFloat = 0.0
+    private var shapeLayer : CAShapeLayer!
     
+    func getSides() -> Int {
+        return self.sides
+    }
+    
+    func getRadius() -> CGFloat {
+        return self.radius
+    }
+
     func drawStar(radius: CGFloat, sides: Int) {
+        self.radius = radius
+        self.sides = sides
         
         shapeLayer = CAShapeLayer()
+        shapeLayer.drawsAsynchronously = true
         shapeLayer.fillColor = UIColor(red:0.278, green:0.718, blue:0.635, alpha: 0.5).CGColor
         
         self.layer.addSublayer(shapeLayer)

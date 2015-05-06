@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var grownupLabel : UILabel!
     var galleryButton : UIButton!
     var cameraButton : UIButton!
+    var starscapeView : Starscape!
     
     func camPressed(sender: AnyObject){
         println("camera")
@@ -27,45 +28,11 @@ class ViewController: UIViewController {
         println("gallery")
     }
     
-    func initStarAnimation() {
-        var starView = StarView(frame: CGRect(x:60,y:80,width:20,height:20))
-        starView.drawStar(20,sides: 10)
-        view.addSubview(starView)
-        
-        var starView1 = StarView(frame: CGRect(x:320,y:60,width:20,height:20))
-        starView1.drawStar(10,sides: 8)
-        view.addSubview(starView1)
-        
-        var starView2 = StarView(frame: CGRect(x:170,y:135,width:20,height:20))
-        starView2.drawStar(10,sides: 5)
-        view.addSubview(starView2)
-        
-        var starView3 = StarView(frame: CGRect(x:20,y:260,width:20,height:20))
-        starView3.drawStar(10,sides: 8)
-        view.addSubview(starView3)
-        
-        var starView4 = StarView(frame: CGRect(x:150,y:250,width:20,height:20))
-        starView4.drawStar(15,sides: 5)
-        view.addSubview(starView4)
-        
-        var starView5 = StarView(frame: CGRect(x:360,y:300,width:20,height:20))
-        starView5.drawStar(20,sides: 8)
-        view.addSubview(starView5)
-        
-        var starView6 = StarView(frame: CGRect(x:120,y:445,width:20,height:20))
-        starView6.drawStar(15,sides: 10)
-        view.addSubview(starView6)
-        
-        var starView7 = StarView(frame: CGRect(x:320,y:500,width:20,height:20))
-        starView7.drawStar(20,sides: 8)
-        view.addSubview(starView7)
-        
-        var starView8 = StarView(frame: CGRect(x:50,y:540,width:20,height:20))
-        starView8.drawStar(10,sides: 5)
-        view.addSubview(starView8)
-        
-        var starScape = [starView,starView1,starView2,starView3,starView4,starView5,starView6,starView7,starView8]
-        
+    func presentGrownUpModal(sender: AnyObject){
+        println("this happened")
+        var grownup = AgeGateView()
+        grownup.modalPresentationStyle = .Custom
+        self.presentViewController(grownup, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -74,8 +41,9 @@ class ViewController: UIViewController {
         let backgroundTile : UIImage = UIImage(named:"background_fibers.jpg")!
         self.view.backgroundColor = UIColor(patternImage: backgroundTile)
         
-        
-        initStarAnimation()
+        starscapeView = Starscape(frame: CGRect(x: 0, y: 0, width: (view.frame.width), height: (view.frame.height - 80)))
+        view.addSubview(starscapeView)
+        //initStarAnimation()
         
         galleryButton = UIButton()
         galleryButton.setImage(UIImage(named: "photo_icon_small.png"), forState:.Normal)
@@ -157,8 +125,8 @@ class ViewController: UIViewController {
             constant: 0)
 
         monsterButton = UIButton()
-        monsterButton.setImage(UIImage(named: "big_button_monster.png"), forState:.Normal)
-        monsterButton.setImage(UIImage(named: "big_button_monster_presed.png"), forState:.Highlighted)
+        monsterButton.setImage(UIImage(named: "monster_button_2x.png"), forState:.Normal)
+        monsterButton.setImage(UIImage(named: "monster_button_2x_pressed.png"), forState:.Highlighted)
         monsterButton.addTarget(self, action: "monsterPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         monsterButton.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addSubview(monsterButton)
@@ -208,6 +176,11 @@ class ViewController: UIViewController {
         grownupLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addSubview(grownupLabel)
         
+        grownupLabel.userInteractionEnabled = true
+        
+        var grownUpTap = UITapGestureRecognizer(target: self, action: Selector("presentGrownUpModal:"))
+        grownUpTap.numberOfTapsRequired = 1
+        grownupLabel.addGestureRecognizer(grownUpTap)
         
         // grownup constraints
         let labelWidth = NSLayoutConstraint(item: grownupLabel,
